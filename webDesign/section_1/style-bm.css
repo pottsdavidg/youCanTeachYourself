@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Bungee);
+
+body {
+    background-image: url(https://wallpapercave.com/wp/wp2148242.jpg);
+    font-family: Bungee;
+    padding: 20px;
+    color: #f0f0f0;
+    background-size: cover;
+}
+  
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+  
+h2 {
+    font-size: 30px;
+}
+  
+.established {
+    font-style: italic;
+}
+  
+h1, h2, p {
+    text-align: center;
+}
+  
+.menu {
+    width: 80%;
+    background-color: #00000080;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+}
+
+img {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+hr {
+    height: 2px;
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+  
+.bottom-line {
+    margin-top: 25px;
+}
+  
+.article p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.description {
+    text-align: left;
+    font-size: 14px;
+    color: #c0c0c0;
+}
+  
+.item {
+    text-align: left;
+    width: 75%;
+    font-size: 18px;
+}
+  
+.price {
+    text-align: right;
+    width: 25%;
+    font-size: 18px;
+}
+  
+  /* FOOTER */
+  
+footer {
+    font-size: 14px;
+}
+  
+.address {
+    margin-bottom: 5px;
+}
+  
+a {
+    color: white;
+}
+  
+a:visited {
+    color: gray;
+}
+  
+a:hover {
+    color: red;
+}
+  
+a:active {
+    color: red;
+}

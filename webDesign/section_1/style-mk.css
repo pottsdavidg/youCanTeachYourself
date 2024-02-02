@@ -1,0 +1,50 @@
+h1 {
+   text-align: center; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.marker {
+    height: 300px;
+    width: 40px;
+    margin: 0px 10px;
+    box-shadow: 5px 5px 10px #808080;
+}
+
+.marker:hover {
+    cursor: pointer;
+    box-shadow: 7px 7px 12px #505050;
+}
+
+.cap {
+    height: 80px;
+    width: 40px;
+}
+
+.sleeve {
+    width: 40px;
+    height: 200px;
+    background-color: #ffffff80;
+    border-top: 10px double #000000;
+}
+
+.cap, .sleeve {
+    display: inline-block;
+}
+
+.pink {
+    background: linear-gradient(90deg, #ff69b4, #ffb6c1, #ff69b4);
+}
+
+.orange {
+    background: linear-gradient(90deg, #ff4500, #ff8c00, #ff4500);
+}
+
+.periwinkle {
+    background: linear-gradient(90deg, #52577D, #7C83BC, #52577D);
+}
