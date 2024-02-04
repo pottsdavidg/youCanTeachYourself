@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Join us Today!</title>
+        <link rel="stylesheet" href="style-fm.css">
+    </head>
+
+    <body>
+        
+        <div class="header container">
+            <h1 id="title">College Fraternity Admisision Survey</h1>
+            <p id="description">Please enter all information requested below as part of our screening process.</p>
+        </div>
+
+        <div class="survey container">
+
+            <form id="survey-form">
+                
+                <!-- Gathering user info -->
+                <div class="name container">
+                    <label id="label-name" for="name"> Please enter your full name:
+                        <input id="name" name="userName" type="text" placeholder="Enter your name..." required/>
+                    </label>
+                </div>
+                <div class="email container">
+                    <label id="label-email" for="email">Please enter your email address:
+                        <input id="email" name="userEmail" type="email" placeholder="Enter your email..." required/>
+                    </label>
+                </div>
+                <div class="grad container">
+                    <label id="label-grad" for="number"> What year do you expect to graduate?
+                        <input id="number" name="gradYear" type="number" min="2024" max="2030" placeholder="YYYY"/>
+                    </label>
+                </div>
+
+                <!-- actual criteria for entry to frat -->
+                <div class="referral container">
+                    <label for="referral">How did you hear about us?
+                        <select id="referral" name="userReferral">
+                        <option value="">(select one)</option>
+                        <option value="1">Annual Mixer</option>
+                        <option value="2">Orientation Fair</option>
+                        <option value="3">Alumni</option>
+                        <option value="4">Friend in Frat</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="major container">
+                    <label for="major">What's your declared major?
+                        <select id="major" name="userMajor">
+                        <option value="">(select one)</option>
+                        <option value="1">Computer Science</option>
+                        <option value="2">Engineering</option>
+                        <option value="3">Other</option>
+                        <option value="4">Undecided</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="motivation container">
+                    <label for="motivation">What's your main reason for joining our frat?
+                        <select id="motivation" name="userMotive">
+                        <option value="">(select one)</option>
+                        <option value="1">Community</option>
+                        <option value="2">Connections</option>
+                        <option value="3">Opportunities</option>
+                        <option value="4">Experience</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="current-housing container">Where on campus do you live currently?
+                    <label for="richardson-hall">
+                        <input id="richardson-hall" type="radio" name="current-housing" checked /> Richardson Hall
+                    </label>
+                    <label for="belmont-tower">
+                        <input id="belmont-tower" type="radio" name="current-housing" /> Belmont Tower
+                    </label>
+                    <label for="peckhart-building">
+                        <input id="peckhart-building" type="radio" name="current-housing" /> Peckhart Building
+                    </label>
+                </div>
+
+                <div class="housing-preference container">What's your preference on housing?
+                    <label for="housing-first">
+                        <input id="housing-first" type="checkbox" name="fratHousing" value="first"/> First Floor
+                    </label>
+                    <label for="housing-second">
+                        <input id="housing-second" type="checkbox" name="fratHousing" value="second" /> Second Floor
+                    </label>
+                    <label for="housing-sub">
+                        <input id="housing-sub" type="checkbox" name="fratHousing" value="basement" /> Basement
+                    </label>
+                    <label for="housing-none">
+                        <input id="housing-none" type="checkbox" name="fratHousing" value="none" /> No Preference
+                    </label>
+                </div>
+
+                <!-- essay response section -->
+                <div class="essay-response container">
+                    
+                    <div class="essay-one container">
+                        <label for="essay-one">
+                            <textarea id="essay-one" placeholder="Where do you see yourself in 5 years?"></textarea>
+                        </label>
+                    </div>
+                    
+                    <div class="essay-two container">
+                        <label for="essay-two">
+                            <textarea id="essay-two" placeholder="What are your best attributes you add to a team?"></textarea>
+                        </label>
+                    </div>
+                    
+                    <div class="essay-three container">
+                        <label for="essay-three">
+                            <textarea id="essay-three" placeholder="What is something about you people dislike?"></textarea>
+                        </label>
+                    </div>
+                
+                </div>
+
+                <div class="submit container">
+                    <input id="submit-button" type="submit" value="SUBMIT" />
+                </div>
+            
+            </form>
+
+        </div>
+
+
+    </body>
+
+</html>

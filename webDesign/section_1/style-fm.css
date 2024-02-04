@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: block;
+    background-color: #d8c9cc;
+}
+
+.container {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.header {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    display: block;
+    background-color: #1b323c;
+    color: #d8c9cc;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.survey {
+    margin: auto;
+    padding-top: 50px;
+    width: 50%;
+    min-width: 500px;
+    color: #6d6760;
+    background-color: #839896;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 85%;
+}
+
+.name, .email, .grad,
+.referral, .major, .motivation {
+    margin: 0 auto;
+    background-color: #a8b8b7;
+}
+
+input, select, textarea {
+    padding: 5px;
+    border: none;
+    background-color: #d8c9cc;
+}
+
+.name input, .email input, 
+.grad input, .referral select,
+.major select, .motivation select {
+    margin: auto;
+    width: 25%;
+    display: block;
+}
+
+.current-housing,
+.housing-preference {
+    margin: 10px auto;
+    background-color:#a8b8b7;
+}
+
+.current-housing label,
+.housing-preference label {
+    position: relative;
+    padding-left: 33%;
+    text-align: left;
+    display: block;
+}
+
+textarea {
+    color: #1b323c;
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+
+#submit-button {
+    margin: auto;
+    padding: 10px;
+    width: 25%;
+    color: #d8c9cc;
+    background-color: #1b323c;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+    background-color: #d8c9cc;
+    color: #1b323c;
+}
