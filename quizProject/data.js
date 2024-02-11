@@ -1,106 +1,121 @@
-export const q = {
+/*
+Hard coding in the data like this is obviously unrealistic,
+however I wanted to practice fetching data and using modules.
+*/
+
+export const data = {
     html: [
         {
-            text: "What does HTML stand for?",
-            ans: [
-                { text: "HyperText Markup Language", value: true },
-                { text: "How To Meet Ladies", value: false },
-                { text: "Height Togglable Mixed Language", value: false },
-                { text: "Honestly Twisted My Leg", value: false }
-            ],
-            section: "HTML"
+            header: "<h2 id=\"html-section\">HTML Questions</h2>",
+            qFieldset: ["<fieldset class=\"multiple-choice-container\">","</fieldset>"],
+            qAnsDiv: ["<div class=\"answer-container\">", "</div>"],
         },
         {
-            text: "Which of the following is an element?",
-            ans: [
-                { text: "&lt;div&gt;Hello, World&lt;/div&gt;", value: true },
-                { text: "&lt;div class=&quot;left&quot;&lt;", value: false },
-                { text: "&lt;div id=&quot;header&quot;&lt;", value: false },
-                { text: "&lt;div&gt;", value: false }
-            ],
-            section: "HTML"
+            qNumber: "<h3 class=\"question-number\">Question #1</h3>",
+            qLegend: "<legend>What does HTML stand for?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q0-o1\"><input type=\"radio\" id=\"q0-o1\" name=\"html1\" value=\"true\" />HyperText Markup Language</label>", value: true },
+                { content: "<label for=\"q0-o2\"><input type=\"radio\" id=\"q0-o2\" name=\"html1\" value=\"false\" />How To Meet Ladies</label>", value: false },
+                { content: "<label for=\"q0-o3\"><input type=\"radio\" id=\"q0-o3\" name=\"html1\" value=\"false\" />Height Togglable Mixed Language</label>", value: false },
+                { content: "<label for=\"q0-o4\"><input type=\"radio\" id=\"q0-o4\" name=\"html1\" value=\"false\" />Honestly Twisted My Leg</label>", value: false }
+            ]
         },
         {
-            text: "Which of the following is a tag?",
-            ans: [
-                { text: "&lt;div&gt;", value: true },
-                { text: ".divider", value: false },
-                { text: "class=&quot;header&quot;", value: false },
-                { text: "&lt;!----&gt;", value: false }
-            ],
-            section: "HTML"
+            qNumber: "<h3 class=\"question-number\">Question #2</h3>",
+            qLegend: "<legend>Which of the following is an element?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q1-o1\"><input type=\"radio\" id=\"q1-o1\" name=\"html2\" value=\"true\" />&lt;div&gt;Hello, World&lt;/div&gt;</label>", value: true },
+                { content: "<label for=\"q1-o2\"><input type=\"radio\" id=\"q1-o2\" name=\"html2\" value=\"false\" />&lt;div class=&quot;left&quot;&gt;</label>", value: false },
+                { content: "<label for=\"q1-o3\"><input type=\"radio\" id=\"q1-o3\" name=\"html2\" value=\"false\" />&lt;div id=&quot;header&quot;&gt;</label>", value: false },
+                { content: "<label for=\"q1-o4\"><input type=\"radio\" id=\"q1-o4\" name=\"html2\" value=\"false\" />&lt;div&gt;</label>", value: false }
+            ]
         },
         {
-            text: "Which of the following is an attribute?",
-            ans: [
-                { text: "src", value: true },
-                { text: "div", value: false },
-                { text: "width", value: false },
-                { text: "html", value: false }
-            ],
-            section: "HTML"
+            qNumber: "<h3 class=\"question-number\">Question #3</h3>",
+            qLegend: "<legend>Which of the following is a tag?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q2-o1\"><input type=\"radio\" id=\"q2-o1\" name=\"html3\" value=\"true\" />&lt;div&gt;</label>", value: true },
+                { content: "<label for=\"q2-o2\"><input type=\"radio\" id=\"q2-o2\" name=\"html3\" value=\"false\" />.divider</label>", value: false },
+                { content: "<label for=\"q2-o3\"><input type=\"radio\" id=\"q2-o3\" name=\"html3\" value=\"false\" />class=&quot;header&quot;</label>", value: false },
+                { content: "<label for=\"q2-o4\"><input type=\"radio\" id=\"q2-o4\" name=\"html3\" value=\"false\" />&lt;!----&gt;</label>", value: false }
+            ]
         },
         {
-            text: "Which of these would you use to link an &lt;img&gt; to an image?",
-            ans: [
-                { text: "src", value: true },
-                { text: "href", value: false },
-                { text: "link", value: false },
-                { text: "file", value: false }
-            ],
-            section: "HTML"
+            qNumber: "<h3 class=\"question-number\">Question #4</h3>",
+            qLegend: "<legend>Which of the following is an attribute?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q3-o1\"><input type=\"radio\" id=\"q3-o1\" name=\"html4\" value=\"true\" />src</label>", value: true },
+                { content: "<label for=\"q3-o2\"><input type=\"radio\" id=\"q3-o2\" name=\"html4\" value=\"false\" />div</label>", value: false },
+                { content: "<label for=\"q3-o3\"><input type=\"radio\" id=\"q3-o3\" name=\"html4\" value=\"false\" />width</label>", value: false },
+                { content: "<label for=\"q3-o4\"><input type=\"radio\" id=\"q3-o4\" name=\"html4\" value=\"false\" />html</label>", value: false }
+            ]
+        },
+        {
+            qNumber: "<h3 class=\"question-number\">Question #5</h3>",
+            qLegend: "<legend>Which of these would you use to link an &lt;img&gt; to an image?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q4-o1\"><input type=\"radio\" id=\"q4-o1\" name=\"html5\" value=\"true\" />src=&quot;image.svg&quot;</label>", value: true },
+                { content: "<label for=\"q4-o2\"><input type=\"radio\" id=\"q4-o2\" name=\"html5\" value=\"false\" />href=&quot;image.svg&quot;</label>", value: false },
+                { content: "<label for=\"q4-o3\"><input type=\"radio\" id=\"q4-o3\" name=\"html5\" value=\"false\" />link=&quot;image.svg&quot;</label>", value: false },
+                { content: "<label for=\"q4-o4\"><input type=\"radio\" id=\"q4-o4\" name=\"html5\" value=\"false\" />file=&quot;image.svg&quot;</label>", value: false }
+            ]
         }
     ],
     css: [
         {
-            text: "What does CSS stand for?",
-            ans: [
-                { text: "Cascading Style Sheet", value: true },
-                { text: "Cascading Syntax Sheet", value: false },
-                { text: "Creative Syntax Styling", value: false },
-                { text: "Creative Styling Sheet", value: false }
-            ],
-        section: "CSS"
+            header: "<h2 id=\"css-section\">CSS Questions</h2>",
+            qFieldset: ["<fieldset class=\"multiple-choice-container\">","</fieldset>"],
+            qAnsDiv: ["<div class=\"answer-container\">", "</div>"]
         },
         {
-            text: "What CSS property changes content horizontally using flexbox?",
-            ans: [
-                { text: "justify-content", value: true },
-                { text: "align-items", value: false },
-                { text: "text-align", value: false },
-                { text: "text-decoration", value: false }
-            ],
-            section: "CSS"
+            qNumber: "<h3 class=\"question-number\">Question #1</h3>",
+            qLegend: "<legend>What does CSS stand for?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q5-o1\"><input type=\"radio\" id=\"q5-o1\" name=\"css1\" value=\"true\" />Cascading Style Sheet</label>", value: true },
+                { content: "<label for=\"q5-o2\"><input type=\"radio\" id=\"q5-o2\" name=\"css1\" value=\"false\" />Cascading Syntax Sheet</label>", value: false },
+                { content: "<label for=\"q5-o3\"><input type=\"radio\" id=\"q5-o3\" name=\"css1\" value=\"false\" />Creative Syntax Styling</label>", value: false },
+                { content: "<label for=\"q5-o4\"><input type=\"radio\" id=\"q5-o4\" name=\"css1\" value=\"false\" />Creative Styling Sheet</label>", value: false }
+            ]
         },
         {
-            text: "Starting with the inner-most layer, how does content get rendered to the page?",
-            ans: [
-                { text: "Content, Padding, Border, Margin", value: true },
-                { text: "Margin, Padding, Border, Content", value: false },
-                { text: "Padding, Border, Content, Margin", value: false },
-                { text: "Content, Margin, Padding, Border", value: false }
-            ],
-            section: "CSS"
+            qNumber: "<h3 class=\"question-number\">Question #2</h3>",
+            qLegend: "<legend>What CSS property changes content horizontally using flexbox?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q6-o1\"><input type=\"radio\" id=\"q6-o1\" name=\"css2\" value=\"true\" />justify-content</label>", value: true },
+                { content: "<label for=\"q6-o2\"><input type=\"radio\" id=\"q6-o2\" name=\"css2\" value=\"false\" />align-items</label>", value: false },
+                { content: "<label for=\"q6-o3\"><input type=\"radio\" id=\"q6-o3\" name=\"css2\" value=\"false\" />content-align</label>", value: false },
+                { content: "<label for=\"q6-o4\"><input type=\"radio\" id=\"q6-o4\" name=\"css2\" value=\"false\" />text-align</label>", value: false }
+            ]
         },
         {
-            text: "What does using &quot;::after&quot; do?",
-            ans: [
-                { text: "Creates a psuedo-element after whatever is selected", value: true },
-                { text: "Applies the styles after everything else", value: false },
-                { text: "Delays when the styles are applied", value: false },
-                { text: "Changes nothing, no one uses that", value: false }
-            ],
-            section: "CSS"
+            qNumber: "<h3 class=\"question-number\">Question #3</h3>",
+            qLegend: "<legend>Starting with the inner-most layer, how does content get rendered to the page?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q7-o1\"><input type=\"radio\" id=\"q7-o1\" name=\"css3\" value=\"true\" />Content, Padding, Border, Margin</label>", value: true },
+                { content: "<label for=\"q7-o2\"><input type=\"radio\" id=\"q7-o2\" name=\"css3\" value=\"false\" />Margin, Padding, Border, Content</label>", value: false },
+                { content: "<label for=\"q7-o3\"><input type=\"radio\" id=\"q7-o3\" name=\"css3\" value=\"false\" />Padding, Border, Content, Margin</label>", value: false },
+                { content: "<label for=\"q7-o4\"><input type=\"radio\" id=\"q7-o4\" name=\"css3\" value=\"false\" />Content, Margin, Padding, Border</label>", value: false }
+            ]
         },
         {
-            text: "Why would someone use &quot;:hover&quot;?",
-            ans: [
-                { text: "To change the style when someone hovers over an element", value: true },
-                { text: "To cause the selected element to hover over another element", value: false },
-                { text: "To create a hover effect for the selected element", value: false },
-                { text: "Stop asking me so many questions", value: false }
-            ],
-            section: "CSS"
+            qNumber: "<h3 class=\"question-number\">Question #4</h3>",
+            qLegend: "<legend>What does using &quot;::after&quot; do?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q8-o1\"><input type=\"radio\" id=\"q8-o1\" name=\"css4\" value=\"true\" />Creates a psuedo-element after whatever is selected</label>", value: true },
+                { content: "<label for=\"q8-o2\"><input type=\"radio\" id=\"q8-o2\" name=\"css4\" value=\"false\" />Applies the styles after everything else</label>", value: false },
+                { content: "<label for=\"q8-o3\"><input type=\"radio\" id=\"q8-o3\" name=\"css4\" value=\"false\" />Delays when the styles are applied</label>", value: false },
+                { content: "<label for=\"q8-o4\"><input type=\"radio\" id=\"q8-o4\" name=\"css4\" value=\"false\" />Changes nothing, no one uses that</label>", value: false }
+            ]
+        },
+        {
+            qNumber: "<h3 class=\"question-number\">Question #5</h3>",
+            qLegend: "<legend>Why would someone use &quot;:hover&quot;?</legend>",
+            qAnswer: [
+                { content: "<label for=\"q9-o1\"><input type=\"radio\" id=\"q9-o1\" name=\"css5\" value=\"true\" />To change the style when someone hovers over an element</label>", value: true },
+                { content: "<label for=\"q9-o2\"><input type=\"radio\" id=\"q9-o2\" name=\"css5\" value=\"false\" />To cause the selected element to hover over another element</label>", value: false },
+                { content: "<label for=\"q9-o3\"><input type=\"radio\" id=\"q9-o3\" name=\"css5\" value=\"false\" />To create a hover effect for the selected element</label>", value: false },
+                { content: "<label for=\"q9-o4\"><input type=\"radio\" id=\"q9-o4\" name=\"css5\" value=\"false\" />Stop asking me so many questions</label>", value: false }
+            ]
         }
     ]
 }
