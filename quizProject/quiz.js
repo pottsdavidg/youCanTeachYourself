@@ -15,7 +15,7 @@ function randomArray(inputArray) {
 let target = document.body.getElementsByClassName("question-container");
 
 let HTML = {
-    target: target[0],
+    target: target[1],
     header: data.html[0].header,
     fieldset: { open: data.html[0].qFieldset[0], close: data.html[0].qFieldset[1] },
     ansDiv: { open: data.html[0].qAnsDiv[0], close: data.html[0].qAnsDiv[1] },
@@ -34,7 +34,7 @@ for (let i = 0; i < (data.html.length - 1); i++) {
 HTML.target.innerHTML = sOutput;
 
 let CSS = {
-    target: target[1],
+    target: target[2],
     header: data.css[0].header,
     fieldset: { open: data.css[0].qFieldset[0], close: data.css[0].qFieldset[1] },
     ansDiv: { open: data.html[0].qAnsDiv[0], close: data.html[0].qAnsDiv[1] },
