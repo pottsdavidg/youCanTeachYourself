@@ -51,7 +51,7 @@ export const data = {
             ]
         },
         {
-            qNumber: "<h3 class=\"question-number\">Question #5</h3>",
+            qNumber: "<h3 id=\"css-section\" class=\"question-number\">Question #5</h3>",
             qLegend: "<legend>Which of these would you use to link an &lt;img&gt; to an image?</legend>",
             qAnswer: [
                 { content: "<label for=\"q4-o1\"><input type=\"radio\" id=\"q4-o1\" name=\"html5\" value=\"true\" />src=&quot;image.svg&quot;</label>", value: true },
