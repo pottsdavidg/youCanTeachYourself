@@ -1,1 +1,144 @@
-/* I haven't actually made any CSS in this file yet but needed a way to create the folder to put everything else in lol */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    font-family: Rubik;
+}
+
+body {
+    margin: 0;
+    background-color: #282828;
+}
+ 
+header {
+    z-index: 1;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3c3c3c;
+    position: fixed;
+    top: 0;
+}
+
+h1{
+    color: #c7c7c7;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    padding: 5px;
+    text-decoration: none;
+    color: #c7c7c7;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    background-color: #282828;
+}
+
+#logo {
+    height: 75px;
+    padding: 25px 0;
+}
+
+main {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    color: #c7c7c7;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.info-container {
+    margin: auto;
+    text-align: center;
+    color: #c7c7c7;
+}
+
+.info-container p {
+    margin: 0;
+    padding: 0;
+}
+
+form > div {
+    display: grid;
+    grid: auto auto / repeat(4, auto);
+    margin: 0 auto;
+}
+
+.question-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+
+.question-container input {
+    background-color: #c7c7c7;
+    border: 2px solid #282828;
+}
+
+h2 {
+    text-align: left;
+}
+
+.question-number {
+    text-align: left;
+}
+
+.multiple-choice-container {
+    margin: auto;
+    width: 650px;
+}
+
+.answer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #282828;
+    background-color: #c7c7c7;
+}
+
+button {
+    padding: 10px;
+    margin: 20px 350px;
+    border: 2px solid #282828;
+    border-radius: 10px;
+    background-color: #c7c7c7;
+    color: #282828;
+}
+
+button:hover {
+    background-color: #282828;
+    color: #c7c7c7;
+    cursor: pointer;
+    border: 2px solid #c7c7c7;
+}
+
+footer {
+    width: 100vw;
+    color: #c7c7c7;
+    background-color: #3c3c3c;
+    text-align: center;
+    height: 75px;
+}
+
+address * {
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    color: #e1e1e1;
+    text-decoration: none;
+}
