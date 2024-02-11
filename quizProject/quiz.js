@@ -1,40 +1,53 @@
-import { q } from "data.js";
+import { data } from "./data.js";
 
-function randomizeArray(inputArray) {
-
-   let newArray = inputArray; 
-    // take the array and randomize the order!
-    return newArray;
-
+function randomArray(inputArray) {
+    let rand;
+    let output = [];
+    let loop = inputArray.length;
+    let copy = JSON.parse(JSON.stringify(inputArray));
+    for (let i = 0; i < loop; i++) {
+        rand = Math.floor(Math.random() * copy.length);
+        output.push(copy.splice(rand, 1)[0]);
+    };
+    return output;
 };
 
-for (let i = 1; i <= 2; i++) {
-    
-    let qconts = document.body.getElementsByClassName("question-container");
-    let currentContainer = qconts[i];
+let target = document.body.getElementsByClassName("question-container");
 
-    for (let j = 0; j < myArray.length; j++) {
-        // this code should happen 5 times
-        for (let k = 0; k < 4; k++) {
-            // this code will happen 4 times
-        }
-    }
-}
+let HTML = {
+    target: target[0],
+    header: data.html[0].header,
+    fieldset: { open: data.html[0].qFieldset[0], close: data.html[0].qFieldset[1] },
+    ansDiv: { open: data.html[0].qAnsDiv[0], close: data.html[0].qAnsDiv[1] },
+    question(num) { return data.html[num + 1] }
+};
 
+let sOutput = "";
+sOutput += HTML.header;
+for (let i = 0; i < (data.html.length - 1); i++) {    
+    let c = HTML.question(i);
+    sOutput += c.qNumber + HTML.fieldset.open + c.qLegend + HTML.ansDiv.open;
+    let altArray = JSON.parse(JSON.stringify(randomArray(c.qAnswer)));
+    for (let j = 0; j < 4; j++) { sOutput += altArray[j].content };
+    sOutput += HTML.ansDiv.close + HTML.fieldset.close;
+};
+HTML.target.innerHTML = sOutput;
 
+let CSS = {
+    target: target[1],
+    header: data.css[0].header,
+    fieldset: { open: data.css[0].qFieldset[0], close: data.css[0].qFieldset[1] },
+    ansDiv: { open: data.html[0].qAnsDiv[0], close: data.html[0].qAnsDiv[1] },
+    question(num) { return data.css[num + 1] }
+};
 
-
-/*
-<h2 id="html-section">HTML Questions</h2>
-<h3 class="question-number">Question #1</h3>
-<fieldset class="multiple-choice-container">
-    <legend>
-        What does HTML stand for?
-    </legend>
-    <div class="answer-container">
-        <label for="q1-o1">
-            <input type="radio" id="q1-o1" name="html1" value="true" />
-        </label>
-    </div>
-</fieldset>
-*/
+sOutput = "";
+sOutput += CSS.header;
+for (let i = 0; i < (data.css.length - 1); i++) {    
+    let c = CSS.question(i);
+    sOutput += c.qNumber + CSS.fieldset.open + c.qLegend + CSS.ansDiv.open;
+    let altArray = JSON.parse(JSON.stringify(randomArray(c.qAnswer)));
+    for (let j = 0; j < 4; j++) { sOutput += altArray[j].content };
+    sOutput += CSS.ansDiv.close + CSS.fieldset.close;
+};
+CSS.target.innerHTML = sOutput;
