@@ -1,0 +1,87 @@
+/* 
+COLOR PALETTE 
+#b4d7b9
+#f2e8cf
+#cbdcc6
+#e1e8d7
+#8e9b96
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    background-color: #8e9b96;
+    font-family: Montserrat;
+}
+
+main {
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #e1e8d7;
+}
+
+h1 {
+    padding: 5px;
+}
+
+#img-div {
+    margin: 10px auto;
+    padding: 20px 20px 5px 20px;
+    border-radius: 10px;
+    background-color: #b4d7b9;
+}
+
+#img-caption {
+    padding: 5px;
+}
+
+img {
+    border-radius: 10px;
+    display: block;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+#tribute-info {
+    font-size: 20px;
+}
+
+.content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.section {
+    border-radius: 5px;
+    text-align: left;
+    padding: 15px;
+    margin: 5px;
+    background-color: #cbdcc6;
+}
+
+a {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: #8e9b96;
+    border: 2px solid #8e9b96;
+    color: #f2e8cf;
+}
+
+a:hover {
+    color: #8e9b96;
+    background-color: #f2e8cf;
+}
