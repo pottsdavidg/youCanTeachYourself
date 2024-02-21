@@ -1,4 +1,5 @@
-const div = {
+const app = {
+
     open: "<div class=\"article\"><div class=\"ptitle\">blog.entry(post);</div><div class=\"pbody\"><span class=\"blue pbody-init\">let</span><span class=\"gray pbody-init\">post =</span><span class=\"lime pbody-text\">\"",
     close: "\"</span></div></div>"
 };
