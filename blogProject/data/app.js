@@ -21,27 +21,42 @@ export let app = {
     loadCalls: 0,
 
     fetchPrevious: (n) => {
-        this.loadCalls += 1;
-        if (Object.keys(d.posts).length <= n) {
-            let output = "";
-            let p = app.HTML.post;
-            Object.keys(d.posts).forEach(key => {
-                let body = p.op + d.posts[`${key}`] + p.cl;
-                let crud = "";
-                p.cd.forEach(value => {
-                    crud += value;
-                    if (value != p.cd[3]) crud += key;
-                });
-                output += body + crud;
+    
+        const pTOTAL = Object.keys(d.posts).length;
+        this.loadCalls++;
+        if (pTOTAL <= n) {
+            n = pTOTAL;
+        }
+
+        let output = "";
+        let p = app.HTML.post;
+        
+        for (let i = (pTOTAL); i > (pTOTAL - (n * this.loadCalls)); i--) {
+            let key = Object.keys(d.posts)[i - 1]
+            let body = p.op + d.posts[`${key}`] + p.cl;
+            let crud = "";
+            p.cd.forEach(value => {
+                crud += value;
+                if (value != p.cd[3]) crud += key;
             });
+            output += body + crud;
         };
+        
+        return output;
+    
     },
     
-    createPost: (post) => {
-
+    createPost: () => {
+        let pID = parseInt(Object.keys(d.posts)[Object.keys(d.posts).length - 1], 16) + 1;
+        pID = pID.toString(16);
+        return [app.HTML.create.op + app.HTML.create.cl, pID];
     },
 
     editPost: (post) => {
+
+    },
+
+    submitPost: (content, postID) => {
 
     },
 
