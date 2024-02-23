@@ -1,4 +1,6 @@
-import d from "./post.json";
+const fs = require('fs');
+const DATA = fs.readFileSync('post.json');
+const d = JSON.parse(DATA);
 export let app = {
     
     HTML: {
@@ -24,14 +26,13 @@ export let app = {
     
         const pTOTAL = Object.keys(d.posts).length;
         this.loadCalls++;
-        if (pTOTAL <= n) {
-            n = pTOTAL;
-        }
+        if (pTOTAL <= n) n = pTOTAL;
+        if (pTOTAL < (n * this.loadCalls)) return null;
 
         let output = "";
         let p = app.HTML.post;
         
-        for (let i = (pTOTAL); i > (pTOTAL - (n * this.loadCalls)); i--) {
+        for (let i = pTOTAL; i > (pTOTAL - (n * this.loadCalls)); i--) {
             let key = Object.keys(d.posts)[i - 1]
             let body = p.op + d.posts[`${key}`] + p.cl;
             let crud = "";
@@ -53,19 +54,27 @@ export let app = {
     },
 
     editPost: (post) => {
-
+        const ID = post.dataset.editPostID;
+        return app.HTML.create.op + d.posts[ID] + app.HTML.create.cl;
     },
 
     submitPost: (content, postID) => {
-
+        d.posts[postID] = content;
+        const updatedData = JSON.stringify(d);
+        fs.writeFileSync('post.json', updatedData);
+        app.init();
     },
 
     deletePost: (post) => {
-
+        const ID = post.dataset.deletePostID;
+        d.archive[ID] = d.posts[ID];
+        delete d.posts[ID];
+        app.init();
     },
 
     init: () => {
-        
+        app.loadCalls = 0;
+        return fetchPrevious(3);
     }
 
 }
